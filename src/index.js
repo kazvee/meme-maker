@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { thunk } from 'redux-thunk';
 import { fetchMemes } from './actions';
@@ -15,9 +15,10 @@ const store = configureStore({
 store.subscribe(() => console.log('store', store.getState()));
 store.dispatch(fetchMemes());
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <Provider store={store}>
     <App />
-  </Provider>,
-  document.getElementById('root')
+  </Provider>
 );
