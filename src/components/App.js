@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
+import '../styles/index.css';
 
 class App extends Component {
   constructor() {

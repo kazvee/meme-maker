@@ -1,0 +1,10 @@
+body {
+  text-align: center;
+  padding: 5%;
+  background-color: #fcffee;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.meme-button {
+  cursor: pointer;
+}
