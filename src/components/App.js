@@ -1,4 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';
+import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -21,7 +23,9 @@ class App extends Component {
         {this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
           return <h2 key={index}>{meme.name}</h2>;
         })}
-        <div onClick={this.loadMoreMemes}>Load 10 More Memes</div>{' '}
+        <Button variant='primary' onClick={this.loadMoreMemes}>
+          Load 10 More Memes
+        </Button>{' '}
       </div>
     );
   }
