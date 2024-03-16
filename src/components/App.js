@@ -24,7 +24,22 @@ class App extends Component {
     return (
       <div className='container'>
         <h1>Meme Maker</h1>
-        <h2>Make your Meme</h2>
+        <div className='row'>
+          {this.props.memes
+            .slice(0, this.state.memeLimit)
+            .map((meme, index) => {
+              return (
+                <MemeItem
+                  key={index}
+                  meme={meme}
+                  text0={this.state.text0}
+                  text1={this.state.text1}
+                />
+              );
+            })}
+        </div>
+        <h2>Make your Meme:</h2>
+        <p>Enter caption text, then click an image!</p>
         <div className='row justify-content-center'>
           <Form className='form-check-inline'>
             <FormGroup>
@@ -50,20 +65,6 @@ class App extends Component {
               />
             </FormGroup>
           </Form>
-        </div>
-        <div className='row'>
-          {this.props.memes
-            .slice(0, this.state.memeLimit)
-            .map((meme, index) => {
-              return (
-                <MemeItem
-                  key={index}
-                  meme={meme}
-                  text0={this.state.text0}
-                  text1={this.state.text1}
-                />
-              );
-            })}
         </div>
         <div className='row mt-3'>
           <div className='col text-center'>
