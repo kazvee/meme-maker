@@ -47,3 +47,24 @@ h1 {
   animation-duration: 1s;
   font-size: 14px;
 }
+
+.no-text {
+  display: none;
+}
+
+.darken-image {
+  background-color: gray;
+  filter: brightness(10%);
+  animation-name: darken;
+  animation-duration: 1s;
+}
+
+@keyframes darken {
+  from {filter: brightness(70%)};
+  to {filter: brightness(10%)};
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
