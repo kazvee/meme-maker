@@ -1,5 +1,5 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Component } from 'react';
+import { Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import '../styles/index.css';
@@ -22,6 +22,27 @@ class App extends Component {
     return (
       <div className='container'>
         <h1>Meme Maker</h1>
+        <h2>Make your Meme</h2>
+        <div className='row justify-content-center'>
+          <Form className='form-check-inline'>
+            <FormGroup>
+              <FormLabel>Top Text</FormLabel>
+              <FormControl
+                type='text'
+                name='topText'
+                placeholder='Enter top text'
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormLabel>Bottom Text</FormLabel>
+              <FormControl
+                type='text'
+                name='bottomText'
+                placeholder='Enter bottom text'
+              />
+            </FormGroup>
+          </Form>
+        </div>
         <div className='row'>
           {this.props.memes
             .slice(0, this.state.memeLimit)
