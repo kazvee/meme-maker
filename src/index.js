@@ -11,7 +11,6 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk),
 });
 
-store.subscribe(() => console.log('store', store.getState()));
 store.dispatch(fetchMemes());
 
 const root = createRoot(document.getElementById('root'));

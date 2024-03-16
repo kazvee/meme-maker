@@ -43,8 +43,6 @@ function postMemeJson(params) {
     })
     .join('&');
 
-  console.log(`bodyParams: ${bodyParams}`);
-
   return fetch(CAPTION_API_URL, {
     method: 'POST',
     headers: {
