@@ -39,9 +39,9 @@ class App extends Component {
               );
             })}
         </div>
-        <h2>Make your Meme:</h2>
         <MyMemes />
-        <p>Enter caption text, then click an image!</p>
+        <h2>Make a Meme:</h2>
+        <p>Enter some text, then click an image to generate your meme!</p>
         <div className='row justify-content-center'>
           <Form className='form-check-inline'>
             <FormGroup>
