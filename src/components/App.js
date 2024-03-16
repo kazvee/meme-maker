@@ -25,7 +25,7 @@ class App extends Component {
         {this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
           return <MemeItem key={index} meme={meme} />;
         })}
-        <Button variant='primary' onClick={this.loadMoreMemes}>
+        <Button className='meme-button' variant='primary' onClick={this.loadMoreMemes}>
           Load 10 More Memes
         </Button>{' '}
       </div>
