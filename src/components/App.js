@@ -10,6 +10,8 @@ class App extends Component {
     super();
     this.state = {
       memeLimit: 10,
+      text0: '',
+      text1: '',
     };
     this.loadMoreMemes = this.loadMoreMemes.bind(this);
   }
@@ -29,6 +31,9 @@ class App extends Component {
               <FormLabel>Top Text</FormLabel>
               <FormControl
                 type='text'
+                onChange={(e) => {
+                  this.setState({ text0: e.target.value });
+                }}
                 name='topText'
                 placeholder='Enter top text'
               />
@@ -37,6 +42,9 @@ class App extends Component {
               <FormLabel>Bottom Text</FormLabel>
               <FormControl
                 type='text'
+                onChange={(e) => {
+                  this.setState({ text1: e.target.value });
+                }}
                 name='bottomText'
                 placeholder='Enter bottom text'
               />
