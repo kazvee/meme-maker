@@ -1,4 +1,9 @@
-import { API_PASSWORD, API_URL, API_URL2, API_USERNAME } from './secrets';
+import {
+  API_PASSWORD,
+  API_USERNAME,
+  CAPTION_API_URL,
+  GET_API_URL,
+} from './secrets';
 
 export const RECEIVE_MEMES = 'RECEIVE_MEMES';
 export const NEW_MEME = 'NEW_MEME';
@@ -12,7 +17,7 @@ function receiveMemes(json) {
 }
 
 function fetchMemesJson() {
-  return fetch(API_URL).then((response) => response.json());
+  return fetch(GET_API_URL).then((response) => response.json());
 }
 
 export function fetchMemes() {
@@ -40,7 +45,7 @@ function postMemeJson(params) {
 
   console.log(`bodyParams: ${bodyParams}`);
 
-  return fetch(API_URL2, {
+  return fetch(CAPTION_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
