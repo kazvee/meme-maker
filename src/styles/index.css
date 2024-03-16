@@ -1,14 +1,16 @@
 body {
   background-color: #fcffee;
   font-family: Verdana, Arial, sans-serif;
-  padding: 5%;
+  padding: 1% 5% 5% 5%;
   text-align: center;
   color: white;
   font-weight: bold;
 }
 
 h1 {
+  color: black;
   margin-bottom: 10px;
+  font-size: 48px;
 }
 
 .meme-button {
@@ -34,7 +36,7 @@ h1 {
   border: 3px solid #0D6EFD;
   position: absolute;
   object-fit: cover;
-  filter: brightness(70%);
+  filter: brightness(90%);
 }
 
 .meme-text {
@@ -60,7 +62,7 @@ h1 {
 }
 
 @keyframes darken {
-  from {filter: brightness(70%)};
+  from {filter: brightness(90%)};
   to {filter: brightness(10%)};
 }
 

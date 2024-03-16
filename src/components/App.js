@@ -20,14 +20,26 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         <h1>Meme Maker</h1>
-        {this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
-          return <MemeItem key={index} meme={meme} />;
-        })}
-        <Button className='meme-button' variant='primary' onClick={this.loadMoreMemes}>
-          Load 10 More Memes
-        </Button>{' '}
+        <div className='row'>
+          {this.props.memes
+            .slice(0, this.state.memeLimit)
+            .map((meme, index) => {
+              return <MemeItem key={index} meme={meme} />;
+            })}
+        </div>
+        <div className='row mt-3'>
+          <div className='col text-center'>
+            <Button
+              className='meme-button btn-lg'
+              variant='primary'
+              onClick={this.loadMoreMemes}
+            >
+              Load 10 More Memes
+            </Button>
+          </div>
+        </div>
       </div>
     );
   }
