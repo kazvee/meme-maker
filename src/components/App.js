@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import '../styles/index.css';
 import MemeItem from './MemeItem';
+import MyMemes from './MyMemes';
 
 class App extends Component {
   constructor() {
@@ -39,6 +40,7 @@ class App extends Component {
             })}
         </div>
         <h2>Make your Meme:</h2>
+        <MyMemes />
         <p>Enter caption text, then click an image!</p>
         <div className='row justify-content-center'>
           <Form className='form-check-inline'>
