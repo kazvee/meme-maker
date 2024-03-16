@@ -3,6 +3,7 @@ import { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import { connect } from 'react-redux';
 import '../styles/index.css';
+import MemeItem from './MemeItem';
 
 class App extends Component {
   constructor() {
@@ -22,7 +23,7 @@ class App extends Component {
       <div>
         <h1>Meme Maker</h1>
         {this.props.memes.slice(0, this.state.memeLimit).map((meme, index) => {
-          return <h2 key={index}>{meme.name}</h2>;
+          return <MemeItem key={index} meme={meme} />;
         })}
         <Button variant='primary' onClick={this.loadMoreMemes}>
           Load 10 More Memes
