@@ -8,6 +8,7 @@ class MemeItem extends Component {
     this.state = {
       hovered: false,
     };
+    this.handleMemeClick = this.handleMemeClick.bind(this);
   }
 
   postMeme() {
@@ -20,13 +21,25 @@ class MemeItem extends Component {
     this.props.createMeme(memeObj);
   }
 
+  isTextFilled() {
+    return this.props.text0 || this.props.text1;
+  }
+
+  handleMemeClick() {
+    if (this.isTextFilled()) {
+      this.postMeme();
+    } else {
+      console.log('Please enter text before generating the meme!');
+    }
+  }
+
   render() {
     return (
       <div
         className='meme-item'
         onMouseEnter={() => this.setState({ hovered: true })}
         onMouseLeave={() => this.setState({ hovered: false })}
-        onClick={() => this.postMeme()}
+        onClick={this.handleMemeClick}
       >
         <img
           src={this.props.meme.url}
