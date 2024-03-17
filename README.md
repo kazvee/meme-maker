@@ -13,6 +13,10 @@ It also explores more advanced concepts such as API interaction and handling asy
 
 ### Screenshot of Initial View
 
+### Demo Video
+
+https://github.com/kazvee/meme-maker/assets/109990289/d75548b9-bbbb-43a3-8c7d-56d6dace0f0e
+
 ![Screenshot of Initial View](/src/assets/Meme_Maker_Initial_View.png)
 
 ### Screenshot of User Memes
